@@ -20,7 +20,7 @@ http:
 
 # Configuration for your containers and service.
 image:
-  location: public.ecr.aws/g7f5o4m9/server:4e9082c42006a2fa074b59aa37d27b1c32a683ef
+  location: public.ecr.aws/g7f5o4m9/server:9b6b2a207360bf3159d76a169f14b8fac6ed6192
   # Port exposed through your container to route traffic to it.
   port: 8000
 
@@ -37,7 +37,7 @@ sidecars:
     image: public.ecr.aws/g7f5o4m9/nginx:12b359f0ca53b8dd86d3ae0821e30b57e1561f22
   client:
     port: 3000
-    image: public.ecr.aws/g7f5o4m9/client:01d4e94829dff79d9918ab71c8f6bcbd64357687
+    image: public.ecr.aws/g7f5o4m9/client:c4c2b73b4d1df2546f208a781c00475cd242e72e
     variables:
       SERVER_HOST: http://localhost:8000
     secrets:
@@ -49,8 +49,8 @@ sidecars:
 
 # Optional fields for more advanced use-cases.
 #
-#variables:                    # Pass environment variables as key value pairs.
-#  LOG_LEVEL: info
+variables:                    # Pass environment variables as key value pairs.
+  METRIC_NAMESPACE: server_prod
 
 secrets: # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
   OPENAI_KEY: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/OPENAI_KEY
