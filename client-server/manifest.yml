@@ -34,10 +34,10 @@ network:
 sidecars:
   nginx:
     port: 80
-    image: public.ecr.aws/g7f5o4m9/nginx:12b359f0ca53b8dd86d3ae0821e30b57e1561f22
+    image: public.ecr.aws/g7f5o4m9/nginx:fbce1b55e35127c37bf2bb1440bda94f21e02936
   client:
     port: 3000
-    image: public.ecr.aws/g7f5o4m9/client:c4c2b73b4d1df2546f208a781c00475cd242e72e
+    image: public.ecr.aws/g7f5o4m9/client:b7a299493fad6bc3a204bc2524a5092d5f0a9a83
     variables:
       SERVER_HOST: http://localhost:8000
     secrets:
