@@ -20,7 +20,7 @@ http:
 
 # Configuration for your containers and service.
 image:
-  location: public.ecr.aws/g7f5o4m9/server:9b6b2a207360bf3159d76a169f14b8fac6ed6192
+  location: public.ecr.aws/g7f5o4m9/server:ccd3b13745fdb000413678d3701284699be7eb5a
   # Port exposed through your container to route traffic to it.
   port: 8000
 
