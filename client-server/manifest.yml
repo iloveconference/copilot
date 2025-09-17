@@ -20,7 +20,7 @@ http:
 
 # Configuration for your containers and service.
 image:
-  location: public.ecr.aws/g7f5o4m9/server:ccd3b13745fdb000413678d3701284699be7eb5a
+  location: public.ecr.aws/g7f5o4m9/server:d2c42a670d0328013c97e99c342a5075a35fa566
   # Port exposed through your container to route traffic to it.
   port: 8000
 
@@ -37,7 +37,7 @@ sidecars:
     image: public.ecr.aws/g7f5o4m9/nginx:9927e49c3aa8201cc6132b7d147219bb0fe92372
   client:
     port: 3000
-    image: public.ecr.aws/g7f5o4m9/client:3da5b035786fe0cb39b1be470173c167e3f26723
+    image: public.ecr.aws/g7f5o4m9/client:1cb2260e40e33da77f93ea421f21be59403882b7
     variables:
       SERVER_HOST: http://localhost:8000
     secrets:
