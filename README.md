@@ -1,3 +1,5 @@
+> **Archived 2026-10-14.** iloveconference.org no longer runs on AWS Copilot, and its Copilot app has been deleted. The site is now static files in S3 behind CloudFront, with search on AWS Lambda; the infrastructure is defined in the [server](https://github.com/iloveconference/server) repo.
+
 # AWS copilot manifests to deploy iloveconference
 
 Deploy nginx, client, and server to a single ECS task running on fargate behind an ALB.
